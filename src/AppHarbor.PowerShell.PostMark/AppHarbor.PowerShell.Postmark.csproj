@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PostmarkClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PostmarkSnapIn.cs">
       <SubType>Component</SubType>
     </Compile>
