@@ -32,7 +32,7 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 		{
 			get
 			{
-				return "This is a snapin that sends email using the Postmark API";
+				return "This is a snap-in that sends email using the Postmark API";
 			}
 		}
 	}
