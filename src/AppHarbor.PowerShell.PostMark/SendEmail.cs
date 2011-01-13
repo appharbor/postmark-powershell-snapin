@@ -1,14 +1,14 @@
 ﻿using System.Management.Automation;
-using PM = PostmarkDotNet;
+using PostmarkDotNet;
 
 namespace AppHarbor.PowerShell.Postmark.Commands
 {
 	[Cmdlet("Send", "PostmarkEmail")]
-	public class SendEmail : Cmdlet
+	public class SendEmailCmdlet : Cmdlet
 	{
 		protected override void ProcessRecord()
 		{
-			var message = new PM.PostmarkMessage
+			var message = new PostmarkMessage
 			{
 				From = From,
 				To = To,
@@ -23,7 +23,7 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 
 		[Parameter(ValueFromPipeline = true)]
 		[ValidateNotNullOrEmpty]
-		public PM.PostmarkClient PostmarkClient
+		public PostmarkClient PostmarkClient
 		{
 			get;
 			set;
