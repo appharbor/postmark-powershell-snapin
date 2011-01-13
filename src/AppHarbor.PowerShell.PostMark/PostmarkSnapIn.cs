@@ -2,7 +2,7 @@
 
 namespace AppHarbor.PowerShell.Postmark.Commands
 {
-	class PostmarkSnapIn : PSSnapIn
+	public class PostmarkSnapIn : PSSnapIn
 	{
 		public PostmarkSnapIn()
 			: base()
