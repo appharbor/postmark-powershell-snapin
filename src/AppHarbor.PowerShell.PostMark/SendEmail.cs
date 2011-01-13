@@ -17,6 +17,7 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 				TextBody = TextBody,
 				ReplyTo = ReplyTo,
 			};
+
 			var response = PostmarkClient.SendMessage(message);
 			WriteObject(response);
 		}
@@ -29,7 +30,7 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 			set;
 		}
 
-		[Parameter(Position = 1)]
+		[Parameter(Position = 0, Mandatory = true)]
 		[ValidateNotNullOrEmpty]
 		public string From
 		{
@@ -37,7 +38,7 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 			set;
 		}
 
-		[Parameter(Position = 2)]
+		[Parameter(Position = 1, Mandatory = true)]
 		[ValidateNotNullOrEmpty]
 		public string To
 		{
@@ -45,7 +46,7 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 			set;
 		}
 
-		[Parameter(Position = 3)]
+		[Parameter(Position = 2, Mandatory = true)]
 		[ValidateNotNullOrEmpty]
 		public string Subject
 		{
@@ -53,14 +54,14 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 			set;
 		}
 
-		[Parameter(Position = 4)]
+		[Parameter(Position = 3)]
 		public string HtmlBody
 		{
 			get;
 			set;
 		}
 
-		[Parameter(Position = 5)]
+		[Parameter(Position = 4)]
 		[ValidateNotNullOrEmpty]
 		public string TextBody
 		{
@@ -68,7 +69,7 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 			set;
 		}
 
-		[Parameter(Position = 6)]
+		[Parameter(Position = 5)]
 		public string ReplyTo
 		{
 			get;
