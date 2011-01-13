@@ -4,11 +4,6 @@ namespace AppHarbor.PowerShell.Postmark.Commands
 {
 	public class PostmarkSnapIn : PSSnapIn
 	{
-		public PostmarkSnapIn()
-			: base()
-		{
-		}	
-
 		public override string Name
 		{
 			get
